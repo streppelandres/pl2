@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using SysacadApi.Data;
-using SysacadApi.Interfaces;
-using SysacadApi.Repositories;
+using SysacadApi.Core.Interfaces;
+using SysacadApi.Infrastructure.Persistence;
+using SysacadApi.Infrastructure.Persistence.Repositories;
 
 namespace SysacadApi
 {

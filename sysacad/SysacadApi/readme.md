@@ -8,8 +8,8 @@
                 dataContext.Database.Migrate();
             }
 ```
-- In the package manager console execute: `Add-Migration MigrationName`
+- In the package manager console execute: `Add-Migration MigrationName -OutputDir "Infrastructure/Persistence/Migrations"`
 
 # Update database:
-- Create a migration: `Add-Migration MigrationName`
-- Apply the migration: `Update-Database`
+- Create a migration: `Add-Migration MigrationName -OutputDir "Infrastructure/Persistence/Migrations"`
+- Apply the migration: `Update-Database -MigrationDirectory "Infrastructure/Persistence/Migrations"`
