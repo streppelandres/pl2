@@ -13,6 +13,13 @@ namespace SysacadApi.Repositories
             this.context = context;
         }
 
+        public Course Create(string name)
+        {
+            var courseCreated = context.Add(new Course { Name = name });
+            context.SaveChanges();
+            return courseCreated.Entity;
+        }
+
         public ICollection<Course> GetAll()
         {
             return context.Courses.OrderBy(course => course.CourseId).ToList();
